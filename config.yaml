@@ -1,0 +1,5 @@
+name: 'Comed Hourly Pricing'
+packageKey: 'net.obive.comedhourlypricing'
+permissions:
+  lan: {}
+  discovery: {}

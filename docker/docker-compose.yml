@@ -1,0 +1,12 @@
+
+services:
+  comedproxy:
+    build:
+      context: .
+      dockerfile: dockerfile
+
+    restart: unless-stopped
+    ports:
+      - "18888:18888/tcp"   # proxy
+      - "18830:18830/udp" # discovery
+
