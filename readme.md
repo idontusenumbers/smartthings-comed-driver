@@ -5,7 +5,9 @@ Once setup, the SmartThings hub will poll the Comed hourly pricing API (http://h
 
 
 # Installation
-Repackage, redeploy, rerun, reattach console
+See https://developer.smartthings.com/docs/devices/hub-connected/driver-channels
+
+Repackage, redeploy, rerun, reattach console (You'll need to update the IDs and IP address of the hub)
 ```shell
 smartthings edge:drivers:package && smartthings edge:channels:assign a9f857d7-839d-4c7e-88ae-5b2e66f5ad97 && smartthings edge:drivers:install a9f857d7-839d-4c7e-88ae-5b2e66f5ad97 &&  smartthings edge:drivers:logcat --hub-address=10.0.0.152 a9f857d7-839d-4c7e-88ae-5b2e66f5ad97
 ```
@@ -37,6 +39,9 @@ Cross compile to Linux:
 ```shell
 GOOS=linux GOARCH=amd64 go build -o bin/comedproxy main.go
 ```
+
+# Docker
+Mutlicast does not penetrate into docker containers. This has been kept around for a future scenario where the proxy is configurable.
 
 
 # External reference and documentation
