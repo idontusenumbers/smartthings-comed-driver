@@ -50,7 +50,7 @@ local function refreshValue()
     local price = responseTable.price
     log.info(string.format("Comed price: %s", price))
 
-    timerDevice:emit_event(capabilities.powerMeter.power(math.floor(-1 * price)))
+    timerDevice:emit_event(capabilities.powerMeter.power(math.floor(price)))
 end
 
 local function initialize_device_state(device)
